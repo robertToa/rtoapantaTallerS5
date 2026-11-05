@@ -61,5 +61,18 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
+
+        <Label 
+            Text="Crud adicional"
+            TextColor="Blue"
+            FontSize="15"/>
+        <Entry x:Name="txtId"
+           Placeholder="Ingrese el identificador de la persona"/>
+        <Button x:Name="btnActualizar"
+                Text="Actualizar Persona"
+                Clicked="btnActualizar_Clicked"/>
+        <Button x:Name="btnEliminar"
+                Text="Eliminar Persona"
+                Clicked="btnDelete_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
