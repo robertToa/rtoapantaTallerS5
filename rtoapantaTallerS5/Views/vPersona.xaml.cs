@@ -14,11 +14,17 @@ public partial class vPersona : ContentPage
         lblMessage.Text = string.Empty;
         App._personRepository.AddNewPerson(txtNombre.Text);
         lblMessage.Text = App._personRepository.Message;
+        RecargarGrid();
     }
 
     private void btnMostrar_Cliecked(object sender, EventArgs e)
     {
         lblMessage.Text = string.Empty;
+        RecargarGrid();
+    }
+
+    private void RecargarGrid()
+    {
         List<Persona> personas = App._personRepository.GetAllPerson();
         listaPersonas.ItemsSource = personas;
     }
@@ -33,6 +39,7 @@ public partial class vPersona : ContentPage
         }
         App._personRepository.UpdatePerson(int.Parse(txtId.Text), txtNombre.Text);
         lblMessage.Text = App._personRepository.Message;
+        RecargarGrid();
     }
 
     private void btnDelete_Clicked(object sender, EventArgs e)
@@ -45,5 +52,6 @@ public partial class vPersona : ContentPage
         }
         App._personRepository.DeletePerson(int.Parse(txtId.Text));
         lblMessage.Text = App._personRepository.Message;
+        RecargarGrid();
     }
 }
