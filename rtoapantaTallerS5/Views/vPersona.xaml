@@ -29,7 +29,10 @@
                 <Label Text="Datos de la persona"
                        FontSize="18"
                        FontAttributes="Bold" />
-                <Grid ColumnDefinitions="110,*" ColumnSpacing="10" RowSpacing="10" Grid.Row="2" Grid.Column="2">
+                <Grid RowDefinitions="Auto,Auto"
+                      ColumnDefinitions="110,*"
+                      ColumnSpacing="10"
+                      RowSpacing="10">
                     <Label Text="Id"
                            VerticalOptions="Center"
                            FontAttributes="Bold" 
